@@ -46,7 +46,7 @@ android {
             def keystorePassword = System.getenv("RELEASE_STORE_PASSWORD") ?: keystoreProperties.getProperty('storePassword')
             def keyAliasName = System.getenv("RELEASE_KEY_ALIAS") ?: keystoreProperties.getProperty('keyAlias')
             def keyPasswordValue = System.getenv("RELEASE_KEY_PASSWORD") ?: keystoreProperties.getProperty('keyPassword')
-            if (keystoreFilePath && keystorePassword && keyAliasName && keyPasswordValue) {
+            if (keystoreFilePath && keystoreFilePath.trim() && keystorePassword && keyAliasName && keyPasswordValue) {
                 def keystoreFile = rootProject.file(keystoreFilePath)
                 storeFile keystoreFile
                 storePassword keystorePassword
