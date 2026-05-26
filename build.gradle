@@ -1,8 +1,9 @@
 buildscript {
     repositories {
-        gradlePluginPortal()
-        maven { url 'https://maven.aliyun.com/repository/public' }
         google()
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        gradlePluginPortal()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.3.2'
@@ -14,10 +15,10 @@ buildscript {
 
 allprojects {
     repositories {
-        gradlePluginPortal()
-        maven { url 'https://maven.aliyun.com/repository/public' }
-        mavenCentral()
         google()
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        gradlePluginPortal()
     }
 }
 
