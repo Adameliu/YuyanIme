@@ -79,7 +79,9 @@ android {
 
         debug {
             applicationIdSuffix ".debug"
-            signingConfig signingConfigs.release
+            if (signingConfigs.release.storeFile) {
+                signingConfig signingConfigs.release
+            }
         }
 
     }
